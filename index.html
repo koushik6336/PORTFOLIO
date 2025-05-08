@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio - Lingutla Koushik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .portfolio-heading {
+            text-align: center;
+            font-size: 36px;
+            color: #2a5298;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 10px;
+            background: linear-gradient(90deg, #2a5298, #1e3c72);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px; /* Changed from 50% to square with slight rounding */
+            margin-right: 20px;
+            object-fit: cover; /* Ensures image fills square without distortion */
+            border: 3px solid #2a5298;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header-info h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            background: linear-gradient(90deg, #2a5298, #1e3c72);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .header-info p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, #e6f0fa, #f0f8ff);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .section p, .section ul {
+            margin: 10px 0;
+            color: #333;
+        }
+        .code-block {
+            background: #f0f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            white-space: pre-wrap;
+            margin: 10px 0;
+            border-left: 4px solid #2a5298;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .highlight-block {
+            background: #f9f5ff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 3px solid #6b48ff;
+        }
+        .image-placeholder {
+            background: #ddd;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+        .signature {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background: linear-gradient(135deg, #d6eaff, #e6f0fa);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .signature img {
+            width: 120px;
+            transition: transform 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+        .signature img:hover {
+            transform: scale(1.1);
+        }
+        .signature p {
+            margin: 5px 0 0 0;
+            color: #2c3e50;
+            font-style: italic;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .signature p::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(90deg, #2a5298, #1e3c72);
+            bottom: 0;
+            left: 25%;
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header img {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="portfolio-heading">Student Portfolio</h1>
+        <div class="header">
+            <!-- Square profile photo with subtle rounded corners -->
+            <img src="photo.jpg" alt="Profile Image" style="border-radius: 8px;">
+            <div class="header-info">
+                <h1>Lingutla Koushik</h1>
+                <p>Register Number: RA2311030010283</p>
+                <p>Mail ID: kl9410@srmist.edu.in</p>
+                <p>Department: Networking and communications</p>
+                <p>Semester: IV</p>
+            </div>
+        </div>
+
+        <!-- Rest of your portfolio content remains unchanged -->
+        <div class="section">
+            <h2>Subject Information</h2>
+            <p><strong>Subject Title:</strong> 21CSC204J Design and Analysis of Algorithm</p>
+            <p><strong>Handled By:</strong> Dr.M.Jeyaselvi</p>
+        </div>
+
+        <div class="section">
+            <h2>E-Lab Completion Status</h2>
+            <p><strong>Circle of Execution</strong></p>
+            <img src="circle.png" alt="Circle of Execution">
+        </div>
+
+        <div class="section">
+            <h2>Program Explanation</h2>
+            <p><strong>Problem Description:</strong> Laasya bought a new volleyball in the sports shop. It looks like a medium size. She somehow found the radius of the sphere. But she would like to know the volume of that ball. Can you help her in finding the volume of the ball?</p>
+            <p><strong>Functional Description:</strong> Volume = (4.0/3.0) × π × r³, π = 3.14</p>
+            <p><strong>Constraint:</strong> 1.00 ≤ r ≤ 5.00</p>
+            <p><strong>Input Format:</strong> The only line of input has a single value of type float representing the radius of the ball.</p>
+            <p><strong>Output Format:</strong> Print the volume of the ball in a single line.</p>
+            <p><strong>Code:</strong></p>
+            <div class="code-block">
+#include <stdio.h>
+int main()
+{
+    float radiusofball, volumeofball;
+    scanf("%f", &radiusofball);
+    volumeofball = (4.0/3.0) * radiusofball * radiusofball * radiusofball * 3.14;
+    printf("%f", volumeofball);
+    return 0;
+}
+            </div>
+            <p><strong>Explanation:</strong></p>
+            <p><strong>Line-by-Line Explanation:</strong></p>
+            <ul>
+                <li>1. <code>#include <stdio.h></code>: Includes the Standard Input Output library for basic I/O operations.</li>
+                <li>2. <code>int main()</code>: The main function where program execution begins.</li>
+                <li>3. Variable Declaration: <code>float radius, volume;</code>
+                    <ul>
+                        <li><code>radius</code>: Stores the input value (ball's radius).</li>
+                        <li><code>volume</code>: Will store the calculated volume.</li>
+                    </ul>
+                </li>
+                <li>4. Input Reading: <code>scanf("%f", &radius);</code>
+                    <ul>
+                        <li><code>%f</code>: Format specifier for float input.</li>
+                        <li><code>&radius</code>: Stores the input value in the radius variable.</li>
+                    </ul>
+                </li>
+                <li>5. Volume Calculation: <code>volume = (4.0f / 3.0f) * 3.14f * radius * radius * radius;</code>
+                    <ul>
+                        <li>Uses the sphere volume formula: V = (4/3)πr³.</li>
+                        <li><code>4.0f/3.0f</code>: The fractional part of the formula.</li>
+                        <li><code>3.14f</code>: Approximate value of π (pi).</li>
+                        <li>Multiplied by radius cubed (radius × radius × radius).</li>
+                    </ul>
+                </li>
+                <li>6. Output: <code>printf("%.2f", volume);</code>
+                    <ul>
+                        <li><code>%.2f</code>: Displays the float with exactly 2 decimal places.</li>
+                        <li>Prints the calculated volume.</li>
+                    </ul>
+                </li>
+                <li>7. <code>return 0;</code>: Indicates successful program termination.</li>
+            </ul>
+            <div class="highlight-block">
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Precision Handling: Uses float variables with f suffix (e.g., 3.14f) for consistent floating-point arithmetic.</li>
+                    <li>Formula Implementation: Correctly implements the mathematical formula for sphere volume.</li>
+                    <li>Order of operations is maintained with parentheses.</li>
+                    <li>Input/Output: Simple console interface, clean output formatting.</li>
+                </ul>
+            </div>
+            <div class="highlight-block">
+                <p><strong>Example Execution:</strong></p>
+                <p>Input: <code>3.0</code></p>
+                <p>Calculation: <code>(4.0/3.0) × 3.14 × 3.0 × 3.0 × 3.0 = 1.333... × 3.14 × 27 = 113.04</code></p>
+                <p>Output: <code>113.04</code></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Lab Experiment Completion Status</h2>
+            <img src="lab.jpg" alt="Lab Completion Status">
+        </div>
+
+        <div class="section">
+            <h2>Real World Application in DAA</h2>
+            <p>PPT VR/Simulation Demo</p>
+            <img src="poster.jpg" alt="Real World Application">
+        </div>
+
+        <div class="section">
+            <h2>NPTEL/HOTS Questions Solution</h2>
+            <p><strong>Question:</strong> Optimize Strassen's matrix multiplication for rectangular matrices.</p>
+            <p><strong>Solution:</strong></p>
+            <div class="code-block">
+public static int[][] strassenRectangular(int[][] A, int[][] B) {
+    int m = A.length, n = B[0].length;
+    int size = Math.max(Math.max(A.length, A[0].length), 
+                        Math.max(B.length, B[0].length));
+    
+    // Pad matrices to square dimensions
+    int[][] newA = padMatrix(A, size);
+    int[][] newB = padMatrix(B, size);
+    
+    int[][] C = strassen(newA, newB);
+    return trimMatrix(C, m, n); // Remove padding
+}
+            </div>
+            <p><strong>Time Complexity:</strong> O(n^2.807) vs conventional O(n³)</p>
+        </div>
+
+        <div class="section">
+            <h2>Other Achievements</h2>
+            <p>Details about certifications, competitions, or presentations related to DAA can be added here.</p>
+            <p>(e.g., Registered or practiced on platforms like HackerRank, LeetCode, GitHub, etc.)</p>
+        </div>
+
+        <div class="signature">
+            <img src="sign.jpg" alt="Signature">
+            <p><strong>Signature</strong></p>
+        </div>
+    </div>
+</body>
+</html>
